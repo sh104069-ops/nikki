@@ -1,1 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <title>まいにちの日記</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="appbar">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true">日</span>
+      <h1>まいにちの日記</h1>
+    </div>
+    <div class="who">
+      <label for="studentSelect">なまえ</label>
+      <select id="studentSelect"></select>
+      <span id="teacherBadge" class="teacher-badge" hidden>先生モード</span>
+    </div>
+  </header>
 
+  <nav class="tabs" aria-label="画面の切りかえ">
+    <button class="tab" data-view="calendar">カレンダー</button>
+    <button class="tab" data-view="day">日記を書く</button>
+    <button class="tab" data-view="review">ふりかえり</button>
+    <button class="tab" data-view="teacher">先生</button>
+  </nav>
+
+  <div id="printTitle" class="print-title"></div>
+  <main id="main"></main>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
